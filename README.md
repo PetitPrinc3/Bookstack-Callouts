@@ -2,6 +2,8 @@
 
 ![[]](./callouts.png)
 
+Based on [R4ai's project](https://r4ai.github.io/remark-callout/).
+
 ## Usage 
 
 In your Markdown editor, call your callouts by type :
