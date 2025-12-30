@@ -511,10 +511,10 @@ To apply this theme, add the following to your BookStack's custom HTML head cont
       let title = match[2]?.trim().replace(/<[^>]*>/g, "") || (type.charAt(0).toUpperCase() + type.slice(1));
   
       // Remove the first paragraph's callout tag from the body
-      firstChild.innerHTML = firstChild.innerHTML.replace(/^\[!(.*?)\]\s?/, '');
-  
+      firstChild.innerHTML = firstChild.innerHTML.replace(/^\[!(.*?)\].*/, '');
+
       // Collect the remaining HTML as the body
-      const bodyHtml = children.map(child => child.outerHTML).join('');
+      var bodyHtml = children.map(child => child.outerHTML).join('');
   
       const newHtml = `
         <div data-callout data-callout-type="${type}">
